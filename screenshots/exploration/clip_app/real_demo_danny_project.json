@@ -1,0 +1,200 @@
+{
+  "sourceInfo": {
+    "type": "YOUTUBE",
+    "videoId": "TndWQw05wsA",
+    "title": "24 Hours with Danny Duncan (The $150M YouTuber Building A City)",
+    "thumbnailUrl": "https://i.ytimg.com/vi/TndWQw05wsA/maxresdefault.jpg",
+    "durationMs": 819000,
+    "videoLang": "en",
+    "wordsPerMinute": 194,
+    "videoGenreData": {
+      "detectedGenre": {
+        "genre": "marketingOrAds",
+        "subgenre": "promotions",
+        "deliveryStyle": "conversational"
+      }
+    },
+    "channelInfo": null,
+    "playlistInfo": [],
+    "publishAt": null,
+    "airStartAt": null,
+    "airEndAt": null
+  },
+  "id": "demo-danny",
+  "userId": "demo",
+  "orgId": "demo",
+  "isDeleted": false,
+  "isPurged": false,
+  "projectId": "demo-danny",
+  "sourcePlatform": "YOUTUBE",
+  "sourceId": "YT_TndWQw05wsA",
+  "sourceUri": null,
+  "sourceInfoList": null,
+  "labels": [],
+  "productTier": "TRIAL.CAT",
+  "stage": "COMPLETE",
+  "error": "",
+  "stallCount": 0,
+  "workerUrl": null,
+  "model": null,
+  "curationPref": {
+    "model": "ClipAnything",
+    "clipDurations": [
+      [
+        60,
+        90
+      ]
+    ],
+    "topicKeywords": [],
+    "skipSlicing": false,
+    "skipCurate": false,
+    "genre": "Auto",
+    "customPrompt": "Give me highlight compilations of all the exciting moments in this video",
+    "narrativeKeys": [],
+    "disableJudgeModel": false,
+    "countScaler": 1,
+    "skipCache": true
+  },
+  "storageSize": 970206646,
+  "storageStatus": "PERMANENT",
+  "storageClass": null,
+  "storageExpireAt": "2024-09-05T13:28:45.032Z",
+  "storageClassUpdatedAt": null,
+  "renderPref": {
+    "skipReframe": false,
+    "enableSplitLayout": false,
+    "enableFitLayout": true,
+    "enableFillLayout": true,
+    "enableScreenLayout": false,
+    "enableThreeLayout": false,
+    "enableFourLayout": false,
+    "enableAutoLayout": false,
+    "disableFitLayout": false,
+    "disableFillLayout": false,
+    "fitLayoutCropRatio": "4:3",
+    "enableCrop": true,
+    "layoutAspectRatio": "portrait",
+    "enableVisualHook": false,
+    "enableCaption": true,
+    "captionStyle": "",
+    "captionPosition": "auto",
+    "enableCaptionAnimation": true,
+    "captionAnimation": {
+      "name": "word-level_karaoke_fill-pop",
+      "highlightColor": "#04f827",
+      "bgColor": ""
+    },
+    "enableHighlight": true,
+    "enableEmoji": true,
+    "emojiStyle": {
+      "pos": null,
+      "scaleX": null,
+      "scaleY": null,
+      "rect": {
+        "xPct": 0,
+        "yPct": -0.7906,
+        "wPct": 0.1333333333333333,
+        "hPct": 0.075,
+        "type": "CPct"
+      }
+    },
+    "enableUppercase": true,
+    "highlightColor": {
+      "primary": "#04f827",
+      "secondary": "#FFFD03"
+    },
+    "font": {
+      "id": null,
+      "type": null,
+      "name": null,
+      "path": null,
+      "size": "Large",
+      "numericalSize": 40,
+      "color": "#ffffff",
+      "style": [
+        "900"
+      ],
+      "textDecoration": "",
+      "family": "Montserrat",
+      "stroke": {
+        "enabled": true,
+        "color": "#000000",
+        "width": 8
+      },
+      "shadow": {
+        "enabled": true,
+        "color": "#000000",
+        "x": 2,
+        "y": 2,
+        "blur": 2,
+        "useWordHighlightColor": false
+      }
+    },
+    "screenOverlay": null,
+    "screenOverlayFileId": null,
+    "screenOverlays": [],
+    "enableBroll": null,
+    "enableScreenOverlay": null,
+    "disableScreenOverlay": null,
+    "enableAutoTransition": true,
+    "selectedTransitions": [
+      "crossFade"
+    ],
+    "enableWatermark": false
+  },
+  "refundStatus": null,
+  "createdAt": "2024-08-06T13:28:45.032Z",
+  "updatedAt": "2025-06-16T10:20:20.351Z",
+  "clusterJobId": "FP.demo-danny:20250616101024700.FP",
+  "cluster": "mud",
+  "importPref": {
+    "sourceLang": "en",
+    "ignoreImporterCache": true,
+    "whisperModel": "",
+    "inputGenres": [
+      "general/general"
+    ],
+    "detectGenre": "Lifestyle",
+    "detectSubgenre": "Daily vlog"
+  },
+  "dubbingOptions": null,
+  "upscaleOptions": null,
+  "visibility": "PUBLIC_VIEW",
+  "title": "24 Hours with Danny Duncan (The $150M YouTuber Building A City)",
+  "folderId": null,
+  "useCase": null,
+  "workflowId": null,
+  "workflowVersion": null,
+  "brandKitId": null,
+  "brandKitVersion": null,
+  "atomsConfig": null,
+  "submitSurface": null,
+  "runCount": 2,
+  "autoModelSwitchState": null,
+  "viewed": null,
+  "campaignId": null,
+  "campaignSourceId": null,
+  "campaignBrandTemplateId": null,
+  "reviewStatus": null,
+  "reviewStatusUpdatedBy": null,
+  "reviewStatusUpdatedAt": null,
+  "isPrivate": null,
+  "clipCount": null,
+  "permissions": [
+    "PROJECT_VIEW"
+  ],
+  "promptRecommendations": [
+    "show Danny Duncan's YouTube success story",
+    "find the section discussing zoning and development of the 94-acre estate",
+    "find the discussion about Danny's farm ideas",
+    "show the part where Danny is planning warehouse location",
+    "find the section showing the Sherp delivering supplies",
+    "show the section about early career experiences and YouTube dedication",
+    "find the moments talking about buying Danny's Cream Pies and internet access",
+    "show the section explaining cheap food prices",
+    "find the part where they are exploring 16 Handles Frozen Yogurt",
+    "show the part where they're discussing the Inglewood Sun history"
+  ],
+  "transcriptTxtUrl": "https://signed-ext.cdn.opus.pro/data/demo/demo/demo-danny/transcript.txt?v=1750068787092708&hdnts=FullPath~Expires=1792462691~Signature=6l8l3m8MP91vR7Q2F7fZZkuyo-wjpDKkCoFkNwzZzqFNhq2rngsljPGVLM7AumEf5FLxR3Rk2ESXwBD95uFvAQ",
+  "transcriptSrtUrl": "https://signed-ext.cdn.opus.pro/data/demo/demo/demo-danny/transcript.srt?v=1750068787095882&hdnts=FullPath~Expires=1792462691~Signature=-bvb_Z41AqngtCqGFk48-VW_SQL--gED14Sa77-DwLUWOo258kojJW9NqX-WwocS5hvpsDpOhEtPlBQ4tb2MBg"
+}

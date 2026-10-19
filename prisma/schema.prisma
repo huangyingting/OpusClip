@@ -1,0 +1,262 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// ============================================================================
+// AUTHENTICATION, INVITE-ONLY ADMISSION, RBAC & AUDIT LOGGING
+// ============================================================================
+
+model User {
+  id              String   @id @default(cuid())
+  email           String
+  normalizedEmail String   @unique
+  name            String
+  avatarUrl       String?
+  role            String   @default("creator") // "admin" | "creator" | "viewer"
+  status          String   @default("ACTIVE")  // "ACTIVE" | "DISABLED"
+  creditsBalance  Int      @default(360)
+  creditsTotal    Int      @default(360)
+  planName        String   @default("Pro")     // "Starter" | "Pro" | "Business"
+  billingCycle    String   @default("yearly")  // "monthly" | "yearly"
+  workspaceName   String   @default("Alex Studio Workspace")
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  passwordCredential  PasswordCredential?
+  sentInvitations     AccountInvitation[] @relation("InvitedByUser")
+  acceptedInvitations AccountInvitation[] @relation("AcceptedByUser")
+  auditLogs           AuditLog[]          @relation("ActorAuditLogs")
+
+  clipProjects   ClipProject[]
+  brandTemplates BrandTemplate[]
+  socialAccounts SocialAccount[]
+  scheduledPosts ScheduledPost[]
+  mediaAssets    MediaAsset[]
+}
+
+model PasswordCredential {
+  userId       String   @id
+  passwordHash String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model AccountInvitation {
+  id               String    @id @default(cuid())
+  email            String
+  normalizedEmail  String
+  activeForEmail   String?   @unique
+  role             String    @default("creator") // "admin" | "creator" | "viewer"
+  status           String    @default("PENDING") // "PENDING" | "ACCEPTED" | "REVOKED" | "EXPIRED"
+  tokenHash        String?   @unique
+  expiresAt        DateTime
+  acceptedAt       DateTime?
+  revokedAt        DateTime?
+  invitedByUserId  String
+  acceptedByUserId String?
+  createdAt        DateTime  @default(now())
+  updatedAt        DateTime  @updatedAt
+
+  invitedByUser  User                 @relation("InvitedByUser", fields: [invitedByUserId], references: [id], onDelete: Cascade)
+  acceptedByUser User?                @relation("AcceptedByUser", fields: [acceptedByUserId], references: [id], onDelete: SetNull)
+  emailOutbox    AccountEmailOutbox[]
+
+  @@index([normalizedEmail])
+  @@index([status])
+  @@index([expiresAt])
+}
+
+model AccountEmailOutbox {
+  id            String   @id @default(cuid())
+  invitationId  String
+  recipientEmail String
+  subject       String
+  bodyText      String
+  deliveryState String   @default("QUEUED") // "QUEUED" | "SENT" | "SUPPRESSED"
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  invitation AccountInvitation @relation(fields: [invitationId], references: [id], onDelete: Cascade)
+
+  @@index([invitationId])
+}
+
+model AuditLog {
+  id           String   @id @default(cuid())
+  action       String
+  actorId      String?
+  actorEmail   String?
+  targetType   String
+  targetId     String?
+  ipAddress    String?
+  userAgent    String?
+  metadataJson String   @default("{}")
+  createdAt    DateTime @default(now())
+
+  actor User? @relation("ActorAuditLogs", fields: [actorId], references: [id], onDelete: SetNull)
+
+  @@index([action])
+  @@index([actorId])
+  @@index([createdAt])
+}
+
+// ============================================================================
+// OPUSCLIP STUDIO CORE MODELS
+// ============================================================================
+
+model ClipProject {
+  id                        String   @id @default(cuid())
+  slug                      String   @unique
+  title                     String
+  status                    String   @default("COMPLETED") // "PROCESSING" | "COMPLETED" | "FAILED"
+  sourceType                String   @default("youtube")   // "youtube" | "upload" | "loom" | "zoom" | "rumble" | "sample"
+  sourceUrl                 String
+  videoUrl                  String
+  thumbnailUrl              String
+  durationMs                Int      @default(1445000)
+  videoLang                 String   @default("en")
+  genre                     String   @default("Podcast")
+  workflowMode              String   @default("long-to-shorts")
+  customPrompt              String?
+  creditsUsed               Int      @default(15)
+  isSaved                   Boolean  @default(false)
+  sourceInfoJson            String   @default("{}")
+  curationPrefJson          String   @default("{}")
+  renderPrefJson            String   @default("{}")
+  promptRecommendationsJson String   @default("[]")
+  brandTemplateId           String?
+  ownerId                   String
+  createdAt                 DateTime @default(now())
+  updatedAt                 DateTime @updatedAt
+
+  owner         User             @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+  brandTemplate BrandTemplate?   @relation(fields: [brandTemplateId], references: [id], onDelete: SetNull)
+  clips         ExportableClip[]
+
+  @@index([ownerId])
+  @@index([isSaved])
+}
+
+model ExportableClip {
+  id                     String   @id @default(cuid())
+  projectId              String
+  rank                   Int
+  title                  String
+  description            String   @default("")
+  hashtags               String   @default("")
+  score                  Int      @default(90) // 0-100 Virality Score™
+  hookGrade              String   @default("A")
+  flowGrade              String   @default("A-")
+  valueGrade             String   @default("A")
+  trendGrade             String   @default("A-")
+  judgeResultJson        String   @default("{}")
+  startMs                Int      @default(0)
+  endMs                  Int      @default(60000)
+  durationMs             Int      @default(60000)
+  videoUrl               String
+  thumbnailUrl           String
+  transcriptText         String
+  sceneAnalysisText      String   @default("")
+  screenplayJson         String   @default("{}")
+  renderPrefOverrideJson String?
+  isFavorite             Boolean  @default(false)
+  feedbackRating         String?  // "up" | "down" | null
+  createdAt              DateTime @default(now())
+  updatedAt              DateTime @updatedAt
+
+  project        ClipProject     @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  scheduledPosts ScheduledPost[]
+
+  @@index([projectId])
+  @@index([score])
+}
+
+model BrandTemplate {
+  id          String   @id @default(cuid())
+  name        String
+  isDefault   Boolean  @default(false)
+  aspectRatio String   @default("9:16")    // "9:16" | "1:1" | "16:9"
+  layoutMode  String   @default("fill")    // "fill" | "fit" | "split"
+  presetKey   String   @default("karaoke") // "karaoke" | "beasty" | "mozi" | "deep-diver" | "popline"
+  configJson  String   @default("{}")
+  ownerId     String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  owner    User          @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+  projects ClipProject[]
+
+  @@index([ownerId])
+}
+
+model SocialAccount {
+  id             String   @id @default(cuid())
+  platform       String   // "youtube" | "tiktok" | "instagram" | "facebook" | "linkedin" | "x" | "threads" | "bluesky" | "pinterest"
+  handle         String
+  displayName    String
+  avatarUrl      String?
+  status         String   @default("CONNECTED") // "CONNECTED" | "DISCONNECTED"
+  followersCount Int      @default(12400)
+  ownerId        String
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  owner          User            @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+  scheduledPosts ScheduledPost[]
+
+  @@index([ownerId])
+  @@index([platform])
+}
+
+model ScheduledPost {
+  id              String   @id @default(cuid())
+  clipId          String?
+  socialAccountId String?
+  platform        String
+  title           String
+  caption         String
+  hashtags        String   @default("")
+  videoUrl        String   @default("/videos/sample_podcast.mp4")
+  scheduledAt     DateTime
+  status          String   @default("SCHEDULED") // "SCHEDULED" | "PUBLISHED" | "DRAFT" | "FAILED"
+  viewsCount      Int      @default(0)
+  likesCount      Int      @default(0)
+  commentsCount   Int      @default(0)
+  sharesCount     Int      @default(0)
+  ownerId         String
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  owner         User            @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+  clip          ExportableClip? @relation(fields: [clipId], references: [id], onDelete: SetNull)
+  socialAccount SocialAccount?  @relation(fields: [socialAccountId], references: [id], onDelete: SetNull)
+
+  @@index([ownerId])
+  @@index([scheduledAt])
+}
+
+model MediaAsset {
+  id          String   @id @default(cuid())
+  name        String
+  category    String   @default("b-roll") // "b-roll" | "logo" | "music" | "intro-outro" | "video"
+  fileUrl     String
+  mimeType    String   @default("video/mp4")
+  durationSec Float    @default(12.0)
+  sizeBytes   Int      @default(1048576)
+  tags        String   @default("")
+  ownerId     String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  owner User @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+
+  @@index([ownerId])
+  @@index([category])
+}

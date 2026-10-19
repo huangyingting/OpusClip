@@ -1,0 +1,116 @@
+{
+  "routes": [
+    {
+      "name": "02_dashboard_sidebar_expanded",
+      "path": "/dashboard",
+      "text": "41\nLoading...\nAdd credits\nA\n\nCreate\n\nPost\n\nGet clips in 1 click\nUpload\nGoogle Drive\nLong to shorts\nEdit video\nAI Captions\nAI Producer\nBeta\nAI B-roll\nAI Reframe\nAuto SFX\nUpscale\nVoice dubbing\nEnhance speech\nVoiceover hook\nScript to video\nBeta\nMaster OpusClip\nQuestions?\n\nOpusClip - AI-powered Video Repurposing\n\nNews\n\nBring in your audio from a file or a link\n\nOpen Audio and click Upload to bring in a track, however you have it.\n\nNow publish to Pinterest, Threads, and Bluesky\n\nConnect your Pinterest, Threads, or Bluesky account and publish directly from OpusClip.\n\nGenerate animated video assets in one prompt\n\nCreate B-Rolls, intro/outros, or any motion graphics you want in Motion Studio\n\nAdd OpusClip to Claude in a few clicks\n\nOpusClip is now an official Claude connector. No API keys, no MCP setup. Search for OpusClip in Claude's connector directory, connect, and start prompting.\n\nYour voice can now be louder and clearer with upgraded Speech Enhancement\n\nSpeech Enhancement now boosts your voice volume and clarity while removing background noise. With new sliders, you can now fine tune the result to find your perfect sound.\n\nFade Your Music and Sound Effects In and Out\n\nGive your clips a polished finish with smooth audio fades up to 5 seconds per side. Perfect for short vertical clips that loop.\n\nAdd the full video link to your YouTube short in one click\n\nClick Publish on Social and tick one checkbox and the link lands between your captions and hashtags.\n\nCreate your own Brand Vocabulary in Asset Library\n\nSave terms and proper nouns in Brand Vocabulary, or do it directly in the editor, then they'll be transcribed correctly.\n\nNew B-roll Layouts — Picture-in-Picture and Split!\n\nIn the editor, click any B-roll on your timeline and pick your framing from Layout.\n\nBad Takes Removal Is Now in Speech Cleanup!\n\nClick Detect retakes in Speech Cleanup — every retake, restart, and self-correction flagged inline. Nothing gets cut without your say.\n\nAuto Headline Is Now in Your Brand Template!\n\nSet it once - font, color, position. Get it on every clip. No more manual steps.\n\nOne-Click AI Sound Effects!\n\nAutomatically add production-quality sound effects to your clips, no editing required!\n\nIntroducing AI Video B-roll (Powered by Agent Opus)\n\nInstantly generate dynamic AI video B-roll in the OpusClip editor. Available for Pro plans and above — try it now with 3 free clips!\n\nGo Global in Your Own Voice: Video Dubbing is Here!\n\nNo re-recording, no generic AI voice. Video Dubb"
+    },
+    {
+      "name": "05_projects",
+      "path": "/projects",
+      "finalUrl": "https://clip.opus.pro/projects",
+      "text": "Loading...\nAdd credits\nA\n\nCreate\n\nPost\n\nMy projects\n\nAll\nCollections (1)\nProjects\n\nCollections\n\nAdd new collection\n\nFavorites\n\n0 clips\n\nProjects\n\n0 GB / 0 GB\n\nAuto-save\nAuto-import\n\nUpload new video"
+    },
+    {
+      "name": "06_brand_templates",
+      "path": "/brand-templates-ux",
+      "finalUrl": "https://clip.opus.pro/brand-templates-ux",
+      "text": "A\n\nCreate\n\nPost\n\nBrand template\n\nQuickly set up your video template\n\nSave template\n\nFetching API resources(2/7)...\n\n29%\n\nSetting\n\nStyle\n\nClip layout settings\n\nfill fit\n\nCaption\n\nAuto headline\n\nClassic\n\nPin first speaker\n\nBrand\n\nOverlay (logo, CTA)\n\nIntro/outro\n\nMusic\n\nAI\n\nRemove filler words\n\nRemove pauses\n\nAI keywords highlighter\n\nAI emojis\n\nStock video B-roll\n\nAuto transitions\n\nAuto zoom\n\nNew brand template design\n\nGet ready to set up video template effortlessly. Check out\n\nthese quick tips to get started!\n\nSkip\nGet started"
+    },
+    {
+      "name": "07_calendar",
+      "path": "/auto-post/calendar",
+      "finalUrl": "https://clip.opus.pro/auto-post/calendar",
+      "text": "TypeError: Cannot read properties of undefined (reading 'total')\nat rA (https://clip.opus.pro/_next/static/chunks/2kdw-cwp9-ng0.js:1:90823)\nat ak (https://clip.opus.pro/_next/static/chunks/3y1r9aan503-o.js:1:64863)\nat up (https://clip.opus.pro/_next/static/chunks/3y1r9aan503-o.js:1:76710)\nat i (https://clip.opus.pro/_next/static/chunks/3y1r9aan503-o.js:1:124144)\nat oO (https://clip.opus.pro/_next/static/chunks/3y1r9aan503-o.js:1:102952)\nat oD (https://clip.opus.pro/_next/static/chunks/3y1r9aan503-o.js:1:102822)\nat oE (https://clip.opus.pro/_next/static/chunks/3y1r9aan503-o.js:1:99593)\nat oz (https://clip.opus.pro/_next/static/chunks/3y1r9aan503-o.js:1:99982)\nat r8 (https://clip.opus.pro/_next/static/chunks/3y1r9aan503-o.js:1:48774)\nat https://clip.opus.pro/_next/static/chunks/3y1r9aan503-o.js:1:97507\n"
+    },
+    {
+      "name": "08_social_accounts",
+      "path": "/post/plansocial",
+      "finalUrl": "https://clip.opus.pro/post/plansocial",
+      "text": "Loading...\nAdd credits\nA\n\nCreate\n\nPost\n\nSuccessfully connected to"
+    },
+    {
+      "name": "09_analytics",
+      "path": "/analytics",
+      "finalUrl": "https://clip.opus.pro/analytics",
+      "text": "Loading...\nAdd credits\nA\n\nCreate\n\nPost\n\nAnalytics\nComing soon\nData reflects your YouTube & TikTok accounts connected to OpusClip. Add more social accounts for deeper insights.\nLast 7 days\nFiltering by\nVideo Performance\nAccount views\n11 Oct 2026 - 17 Oct 2026\nAdvanced analytics will be available soon"
+    },
+    {
+      "name": "10_subscription",
+      "path": "/subscription",
+      "finalUrl": "https://clip.opus.pro/subscription",
+      "text": "Loading...\nAdd credits\nA\n\nCreate\n\nPost\n\nQuestions?"
+    },
+    {
+      "name": "11_campaigns",
+      "path": "/campaigns",
+      "finalUrl": "https://clip.opus.pro/campaigns",
+      "text": "Loading...\nAdd credits\nA\n\nCreate\n\nPost"
+    },
+    {
+      "name": "12_collections",
+      "path": "/collections",
+      "finalUrl": "https://clip.opus.pro/projects",
+      "text": "Loading...\nAdd credits\nA\n\nCreate\n\nPost\n\nMy projects\n\nAll\nCollections (1)\nProjects\n\nCollections\n\nAdd new collection\n\nFavorites\n\n0 clips\n\nProjects\n\n0 GB / 0 GB\n\nAuto-save\nAuto-import\n\nUpload new video\n\nOpusClip - AI-powered Video Repurposing"
+    },
+    {
+      "name": "13_search",
+      "path": "/search",
+      "finalUrl": "https://clip.opus.pro/search",
+      "text": "Loading...\nAdd credits\nA\n\nCreate\n\nPost\n\nYou do not have permission to access the search feature.\n\nContact us\nGo to Dashboard"
+    },
+    {
+      "name": "14_tool_yt_title",
+      "path": "/tools/youtube-title-generator",
+      "finalUrl": "https://clip.opus.pro/tools/youtube-title-generator",
+      "text": "OpusClip\n|\n\nYouTube Title Generator\n\nFree\nGo to OpusClip\nGenerate YouTube Titles That Get More Views\n\nCreating compelling YouTube titles doesn't have to be hard. Our AI-powered YouTube title generator helps you craft click-worthy titles in seconds, boosting your views and growing your channel faster.\n\nDescribe your video\n0/500\nGenerate YouTube titles\nGet More Clicks with Eye-Catching Titles\nStandout Video Titles with Just 1 Click\n\nOur YouTube title generator helps you craft the perfect title that will get clicks from brand new viewers. Just describe your video, and our AI will generate YouTube titles you can choose from. No complicated software or design experience required.\n\nPerfect for YouTube Beginners, Experienced Creators, and More\n\nWhether you're a YouTube veteran or just starting your first channel, our YouTube title generator adapts to your needs. Create professional YouTube video titles that compete with top creators, all while saving hours of brainstorming time.\n\nScroll Stopping Titles to Compete with Top Creators\n\nOur AI is trained on the highest performing patterns for YouTube thumbnails, to help you gain a competitive edge and stand out on YouTube.\n\nAttract New Viewers Like a Magnet\n\nOur YouTube title generator not only saves you time, but also helps your video attract new viewers to your videos. If your goal is to gain more views and more subscribers, try out our free tool.\n\nCreate, design, publish, grow. All-in-one YouTube creator platform\n\nStop juggling multiple apps and subscriptions. Get everything you need to grow your YouTube channel in one place.\n\n#1 AI Clipping Tool\n\nGet more views by turning your longform videos into YouTube Shorts\n\nAuto Captions\n\nWith 1 click, add captions that improve your video's engagement, reach and accessibility\n\nSocial Post Automation\n\nSchedule your social posts and save time, all from inside OpusClip\n\nImport from 10+ Sources\n\nImport your longform videos from almost anywhere to clip into YouTube Shorts\n\nImprove your Audio\n\nOur AI audio enhancement features make your videos perform better\n\nView Post Performance\n\nSocial post analytics that show you what's working and what isn't\n\nAdd Music\n\nAdd background music to your videos instantly\n\nAI Reframing\n\nOur AI intelligently crops your videos for any platform, keeping what's important in focus\n\nGot questions?\n\nEverything you need to know about creating the perfect YouTube video title\n\nHow does a YouTube title generator work?\n\nThe AI analyzes your video content and ta"
+    },
+    {
+      "name": "15_tool_tiktok_caption",
+      "path": "/tools/tiktok-caption-generator",
+      "finalUrl": "https://clip.opus.pro/tools/tiktok-caption-generator",
+      "text": "OpusClip\n|\n\nTikTok Caption Generator\n\nFree\nGo to OpusClip\nTikTok Caption Generator: Go Viral with AI-Powered Captions\n\nStop staring at a blank screen. Our free AI TikTok Caption Generator helps you craft catchy, scroll-stopping captions in seconds. Generate viral TikTok caption ideas that boost your likes, shares, and followers.\n\nVideo Topic *\n✗ 5-500 characters required\n0/500\nCaption Tone *\nCasual\nExample Topics\nCooking tips and recipes\nWorkout motivation\nTravel adventures\nFashion and style\nTech reviews\nLife hacks\nGenerate TikTok Captions\nStop the Scroll with the Perfect TikTok Caption\nGenerate Viral Captions in One Click\n\nOur AI TikTok caption generator crafts the perfect hook to grab attention. Just describe your video, and our AI will generate multiple catchy TikTok captions optimized for the algorithm. No more writer's block.\n\nPerfect for Creators, Brands, and Agencies\n\nWhether you're an aspiring influencer or a brand managing multiple accounts, our caption maker for TikTok adapts to your needs. Create professional captions that resonate with your audience and save hours of brainstorming.\n\nMaster Any Vibe: Funny, Aesthetic, or Motivational\n\nNeed a funny TikTok caption generator? Or something more aesthetic? Our tool lets you customize the tone to match your video's vibe perfectly, ensuring your content always feels authentic and engaging.\n\nBoost Engagement and Grow Your Following\n\nOur AI captions for TikTok don't just save you time; they're designed to drive engagement. By using trendy formats and strategic hashtags, our tool helps you attract new followers and get the likes and shares you deserve.\n\nCreate, design, publish, grow. All-in-one YouTube creator platform\n\nStop juggling multiple apps and subscriptions. Get everything you need to grow your YouTube channel in one place.\n\n#1 AI Clipping Tool\n\nGet more views by turning your longform videos into YouTube Shorts\n\nAuto Captions\n\nWith 1 click, add captions that improve your video's engagement, reach and accessibility\n\nSocial Post Automation\n\nSchedule your social posts and save time, all from inside OpusClip\n\nImport from 10+ Sources\n\nImport your longform videos from almost anywhere to clip into YouTube Shorts\n\nImprove your Audio\n\nOur AI audio enhancement features make your videos perform better\n\nView Post Performance\n\nSocial post analytics that show you what's working and what isn't\n\nAdd Music\n\nAdd background music to your videos instantly\n\nAI Reframing\n\nOur AI intelligently crops your videos for any "
+    },
+    {
+      "name": "16_tool_transcript",
+      "path": "/tools/transcript-maker",
+      "finalUrl": "https://clip.opus.pro/tools/transcript-maker",
+      "text": "OpusClip\n|\n\nYouTube Transcript Maker\n\nFree\nGo to OpusClip\nFree YouTube Transcript Generator — Full Text in Seconds\n\nPaste any YouTube link and get a clean, accurate transcript instantly. Our AI transcription tool supports 20+ languages and videos up to 30 minutes. No sign-up required.\n\nVideo link\nGenerate Transcript\nWhy Creators and Researchers Use Our Transcript Tool\nFull Transcripts from Any YouTube Video\n\nPaste a URL and get a complete, timestamped transcript in seconds. Our AI processes speech with high accuracy across accents, background noise, and fast speakers — so you get usable text, not garbled output.\n\nPerfect for Students, Researchers, and Content Creators\n\nTurn lectures into study notes, extract quotes from interviews, or repurpose podcast content into blog posts. Our transcript tool saves hours of manual transcription work for anyone who works with video.\n\nSupports 20+ Languages Automatically\n\nNo need to select a language — our AI detects it automatically. Whether your video is in English, Spanish, Japanese, or Hindi, you get an accurate transcript without any extra setup.\n\nCopy, Download, and Share Instantly\n\nOnce your transcript is ready, copy the full text, download it, or share a link with your team. No account needed for basic use — just paste, generate, and go.\n\nCreate, design, publish, grow. All-in-one YouTube creator platform\n\nStop juggling multiple apps and subscriptions. Get everything you need to grow your YouTube channel in one place.\n\n#1 AI Clipping Tool\n\nGet more views by turning your longform videos into YouTube Shorts\n\nAuto Captions\n\nWith 1 click, add captions that improve your video's engagement, reach and accessibility\n\nSocial Post Automation\n\nSchedule your social posts and save time, all from inside OpusClip\n\nImport from 10+ Sources\n\nImport your longform videos from almost anywhere to clip into YouTube Shorts\n\nImprove your Audio\n\nOur AI audio enhancement features make your videos perform better\n\nView Post Performance\n\nSocial post analytics that show you what's working and what isn't\n\nAdd Music\n\nAdd background music to your videos instantly\n\nAI Reframing\n\nOur AI intelligently crops your videos for any platform, keeping what's important in focus\n\nYouTube Transcript FAQ\n\nCommon questions about generating transcripts from YouTube videos.\n\nHow do I get the transcript of a YouTube video?\n\nPaste the YouTube video URL into our tool and click \"Generate Transcript.\" The AI processes the audio and delivers a full text transcript in se"
+    }
+  ],
+  "apiEndpoints": [
+    "POST https://api.opus.pro/api/auth/session-profile",
+    "POST https://api.opus.pro/api/org-members/prepare-assembled-basic-info",
+    "GET https://api.opus.pro/api/client-access-control",
+    "GET https://api.opus.pro/api/login-users/intercom-tokens",
+    "POST https://api.opus.pro/api/subscriptions/payment-method-currency-operation",
+    "POST https://api.opus.pro/api/login-users/check-login-identity",
+    "GET https://api.opus.pro/api/orgs",
+    "GET https://api.opus.pro/api/user-guide-use-records",
+    "GET https://api.opus.pro/api/social-accounts",
+    "GET https://api.opus.pro/api/social-accounts/health-check",
+    "GET https://api.opus.pro/api/campaigns",
+    "GET https://api.opus.pro/api/org-credits",
+    "GET https://api.opus.pro/api/subscription-coupons",
+    "GET https://api.opus.pro/api/subscription-plans",
+    "GET https://api.opus.pro/api/subscriptions",
+    "GET https://api.opus.pro/api/login-users",
+    "GET https://api.opus.pro/api/video-upscaling-tasks",
+    "POST https://api.opus.pro/api/clip-projects/count",
+    "GET https://api.opus.pro/api/changelog",
+    "GET https://api.opus.pro/api/project-playlists",
+    "GET https://api.opus.pro/api/project-channels",
+    "GET https://api.opus.pro/api/auto-import",
+    "GET https://api.opus.pro/api/clip-projects",
+    "POST https://api.opus.pro/api/source-videos",
+    "POST https://api.opus.pro/api/upload-links-v2",
+    "POST https://api.opus.pro/api/dog-events",
+    "GET https://api.opus.pro/api/collections",
+    "GET https://api.opus.pro/api/curated-clips/like-clips",
+    "GET https://api.opus.pro/api/brand-templates",
+    "GET https://api.opus.pro/api/fancy-template-presets",
+    "GET https://api.opus.pro/api/brand-kits",
+    "GET https://api.opus.pro/api/project",
+    "GET https://api.opus.pro/api/post-tasks"
+  ]
+}

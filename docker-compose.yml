@@ -1,0 +1,39 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: opusclip
+      POSTGRES_PASSWORD: opusclip_password
+      POSTGRES_DB: opusclip
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U opusclip -d opusclip"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: "postgresql://opusclip:opusclip_password@postgres:5432/opusclip?schema=public"
+      NEXTAUTH_URL: "http://localhost:3000"
+      NEXTAUTH_SECRET: "${NEXTAUTH_SECRET:-opusclip-production-secret-change-me}"
+      ACCOUNT_ADMISSION_MODE: "invitation-only"
+      BOOTSTRAP_ADMIN_EMAIL: "${BOOTSTRAP_ADMIN_EMAIL:-admin@opusclip.local}"
+      BOOTSTRAP_ADMIN_PASSWORD: "${BOOTSTRAP_ADMIN_PASSWORD:-AdminPassword123!}"
+      BOOTSTRAP_ADMIN_NAME: "${BOOTSTRAP_ADMIN_NAME:-Workspace Admin}"
+    ports:
+      - "3000:3000"
+
+volumes:
+  postgres_data:
